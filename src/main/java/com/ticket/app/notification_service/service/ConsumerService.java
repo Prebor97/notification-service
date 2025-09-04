@@ -41,12 +41,12 @@ public class ConsumerService {
 
     @KafkaListener(topics = "user-role-updated-topic", groupId = "notification-group-user")
     public void handleUserRoleUpdatedEvent(String message) {
-        processing.processUserServiceEvent(message, UserLoggedEvent.class,"role-updated-mail-template.html","Login Alert!" );
+        processing.processUserServiceEvent(message, UserLoggedEvent.class,"role-updated-mail-template.html","Role update Alert!" );
     }
 
     @KafkaListener(topics = "password-reset-requested-topic", groupId = "notification-group-user")
     public void handlePasswordResetEvent(String message) {
-        processing.processUserServiceEvent(message, PasswordResetRequestEvent.class,"password-reset-mail-template.html","Login Alert!" );
+        processing.processUserServiceEvent(message, PasswordResetRequestEvent.class,"password-reset-mail-template.html","Password Reset request" );
     }
 
 }
