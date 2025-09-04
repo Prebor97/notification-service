@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Notification Service is a microservice responsible for handling all notifications in the application ecosystem. It uses JavaMailSender to send email notifications to users based on events triggered by other services. This service listens to Kafka topics for notification requests and processes them asynchronously, ensuring reliable and scalable notification delivery without blocking other services.
+The Notification Service is a microservice (part of the ticket event driven microservice architecture) responsible for handling all notifications in the application ecosystem. It uses JavaMailSender to send email notifications to users based on events triggered by other services. This service listens to Kafka topics for notification requests and processes them asynchronously, ensuring reliable and scalable notification delivery without blocking other services.
 
 **Key responsibilities**:
 - Sending email notifications for various events such as ticket booking confirmations, payment status updates, event creation alerts, and user-related notifications (e.g., registration confirmation, password resets).
