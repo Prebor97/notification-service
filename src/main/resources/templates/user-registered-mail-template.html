@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TicketApp</title>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #e6f2ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background-color: #00aaff;
+            color: #ffffff;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .content {
+            padding: 30px 25px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            color: #00aaff;
+            font-size: 22px;
+        }
+
+        .content p {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .activate-button {
+            background-color: #00aaff;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .activate-button:hover {
+            background-color: #0088cc;
+        }
+
+        .footer {
+            background-color: #f0f8ff;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777777;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="header">
+        <h1>Welcome to TicketApp!</h1>
+    </div>
+    <div class="content">
+        <h2>Hello {{name}},</h2>
+        <p>Thank you for joining TicketApp! You're all set to explore and book exciting events around you.</p>
+        <p>Your registered email: <strong>{{email}}</strong></p>
+        <p>To activate your account and start booking tickets, click the button below:</p>
+        <div class="button-container">
+            <a class="activate-button" href="https://yourapp.com/activate/{{user_id}}">Activate Your Account</a>
+        </div>
+        <p>If you did not sign up for this account, simply ignore this email.</p>
+        <p>We look forward to seeing you at amazing events!</p>
+        <p>Cheers,<br>The TicketApp Team</p>
+    </div>
+    <div class="footer">
+        &copy; 2025 TicketApp. All rights reserved.
+    </div>
+</div>
+</body>
+</html>
