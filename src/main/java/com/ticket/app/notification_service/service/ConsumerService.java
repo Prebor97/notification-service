@@ -1,16 +1,9 @@
 package com.ticket.app.notification_service.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ticket.app.notification_service.eventDto.*;
-import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
