@@ -21,5 +21,4 @@ public class ConsumerService {
         processing.processUserServiceEvent(event);
         logger.info("User event processed");
     }
-
 }

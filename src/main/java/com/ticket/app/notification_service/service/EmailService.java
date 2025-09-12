@@ -18,7 +18,7 @@ public class EmailService {
 
     private final JavaMailSender mailSender;
 
-    public void sendMail(Path templatePath, String toEmail, String subject, Map<String, String> placeholders)
+    public void sendUserServiceMail(Path templatePath, String toEmail, String subject, Map<String, String> placeholders)
             throws IOException, MessagingException {
         String content = Files.readString(templatePath);
         for (Map.Entry<String, String> entry : placeholders.entrySet()) {
@@ -34,4 +34,5 @@ public class EmailService {
 
         mailSender.send(message);
     }
+
 }
