@@ -30,8 +30,8 @@ public class EventProcessing {
             if (events.getEmail().size()>1){
                 for (String mail: events.getEmail()){
                     emailService.sendUserServiceMail(templatePath, mail, events.getSubject(), placeholders);
-                    logger.info("message sent to admins");
                 }
+                logger.info("message sent to admins");
             }else {
                 emailService.sendUserServiceMail(templatePath, events.getEmail().get(0), events.getSubject(), placeholders);
                 logger.info("message sent");
